@@ -1,16 +1,18 @@
+import model.Bug;
+
 public class MainApp {
 
     public static void main(String[] args) {
 
-        User bartek = new User("Bartek", "Testowy", "bartek@test.pl", 17);
-        bartek.getAllInfo();
 
+        // MODYFIKATORY DOSTEPU - access modifiers
 
-        Bug bug1 = new Bug("Some small issue", "tester@gmail.com", 1);
+        // DOMYSLNY - dziala w obrebie jednego pakietu
+        // PUBLICZNY - dostep w calym projekcie
 
-        bug1.getAllInfo();
-        bug1.getReporter();
-        System.out.println(bug1.getBugPriority());
+        Bug bug1 = new Bug("1", "tester@gmail.com", 1);
+
+        bug1.setBugDescription("da");
 
 
     }
