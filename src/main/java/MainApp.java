@@ -5,6 +5,7 @@ public class MainApp {
         User bartek = new User("Bartek", "Testowy", "bartek@test.pl", 17);
         bartek.getAllInfo();
 
+
     }
 
 
