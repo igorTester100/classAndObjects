@@ -1,19 +1,16 @@
-import model.Bug;
+import utils.StringUtils;
+import utils.WeekUtils;
 
 public class MainApp {
 
     public static void main(String[] args) {
 
+        String bartekTest = StringUtils.getFormattedText("BartekTest");
 
-        // MODYFIKATORY DOSTEPU - access modifiers
+        System.out.println(bartekTest);
 
-        // DOMYSLNY - dziala w obrebie jednego pakietu
-        // PUBLICZNY - dostep w calym projekcie
-
-        Bug bug1 = new Bug("1", "tester@gmail.com", 1);
-
-        bug1.setBugDescription("da");
-
+        System.out.println(WeekUtils.MONDAY);
+        System.out.println(WeekUtils.TUESDAY);
 
     }
 
