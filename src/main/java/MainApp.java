@@ -1,3 +1,4 @@
+import model.computer.Computer;
 import model.computer.Laptop;
 import model.computer.PC;
 
@@ -5,15 +6,21 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        //1. IS A - jest czyms - DZIEDZICZENIE
-        //2. HAS A - posiada cos - KOMPOZYCJA
 
-        PC officeComputer = new PC("Office Computer", "HP",500, 120);
-        Laptop gamingLaptop = new Laptop("XGames", "HP Games", 500, 256,50);
+        // POLIMORFIZM - WIELE FORM
 
-        officeComputer.switchOn();
-        gamingLaptop.switchOn();
-        officeComputer.switchOn();
+        Computer officeComputer1 = new PC("Office computer 1", "HP",500,128);
+        Computer officeComputer2 = new PC("Office computer 2", "HP", 500,128);
+        Computer officeComputer3 = new PC("Office computer 3", "HP", 500,128);
+        Computer gamingLaptop = new Laptop("XGames", "HP GAMES", 500, 256,50);
+        Computer macbook = new Laptop("HB PRO", "PRO", 500, 256, 100);
+
+        Computer[] computers = {officeComputer1, officeComputer2, officeComputer3, gamingLaptop, macbook};
+
+        for(Computer computer : computers) {
+            computer.switchOff();
+        }
+
     }
 
 
