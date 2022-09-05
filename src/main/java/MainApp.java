@@ -9,7 +9,7 @@ public class MainApp {
 
         // POLIMORFIZM - WIELE FORM
 
-        Computer officeComputer1 = new PC("Office computer 1", "HP",500,128);
+        PC officeComputer1 = new PC("Office computer 1", "HP",500,128);
         Computer officeComputer2 = new PC("Office computer 2", "HP", 500,128);
         Computer officeComputer3 = new PC("Office computer 3", "HP", 500,128);
         Computer gamingLaptop = new Laptop("XGames", "HP GAMES", 500, 256,50);
@@ -20,6 +20,12 @@ public class MainApp {
         for(Computer computer : computers) {
             computer.switchOff();
         }
+
+        officeComputer1.showComputerName();
+
+        // RZUTOWANIE TYPU
+        ((PC)officeComputer2).showComputerName();
+
 
     }
 
