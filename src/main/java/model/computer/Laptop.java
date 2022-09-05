@@ -9,6 +9,20 @@ public class Laptop extends Computer {
         this.batteryLevel = batteryLevel;
     }
 
+    public int volumeUp() {
+        return volumeLevel += 5;
+    }
+
+    public int volumeDown() {
+        volumeLevel -= 2;
+        if(volumeLevel <=0) {
+            return 0;
+        } else {
+            return volumeLevel;
+        }
+
+    }
+
     public void switchOn() {
         System.out.println("Checking battery level");
         if(batteryLevel > 0) {
